@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Salas">
+    <script src="https://kit.fontawesome.com/ab7676f36e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            Logo
+        </div>
+        <p class="appName">Expense Tracker</p>
+        <p class="emptySpace"></p>
+        <p class="login" id="login">Login</p>
+        <p class="signup" id="signup">Sign Up</p>
+        <div class="three-Bar" id="three_Bar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <!-- Aside Bar -->
+
+    <div class="asideBar" id="asideBar">
+        <div id="profile">
+            <i class="fa-regular fa-user" id="asideProfileIcon"></i>
+            <p id="asideProfile">Profile</p>
+        </div>
+        <div id="records">
+            <i class="fa-solid fa-book" id="asideRecordsIcon"></i>
+            <p id="asideRecords">Records</p>
+        </div>        
+        <div class="addCircle" id="add">
+            <div class="add" id="addSym">+</div>
+        </div>
+        <div id="reports">
+            <i class="fa-solid fa-note-sticky" id="asideReportsIcon"></i>
+            <p id="asideReports">Reports</p>
+        </div>
+        <div id="chart">
+            <i class="fa-solid fa-chart-pie" id="asideChartsIcon"></i>
+            <p id="asideCharts">Charts</p>
+        </div> 
+    </div>
+
+    <!-- Info Table -->
+
+    <div class="infoTable" id="infoTable">
+        <input type="date" class="dateInput">
+        <div class="income">
+            <p class="incomeHeading">Income</p>
+            <p class="incomeValue" id="incomeValue">0</p>
+        </div>
+        <div class="expense">
+            <p class="expenseHeading">Expense</p>
+            <p class="expenseValue"  id="expenseValue">0</p>
+        </div>
+        <div class="balance">
+            <p class="balance">Balance</p>
+            <p class="balanceValue" id="balanceValue">0</p>
+        </div>
+    </div>
+
+    <!-- Records Category -->
+
+    <div class="recordInfo" id="recordInfo">
+        <!-- <div class="individualRecordContainer">
+            <i class="fa-solid fa-angle-right" id="iconInRecord"></i>
+            <p class="RecordName">Transport</p>
+            <p class="spacerForindividualRecord"></p>
+            <p class="respectiveRecordAmt">100</p>
+        </div> -->
+    </div>
+
+    <!-- Report Page -->
+
+    <div class="mainMonthlyBudget" id="mainMonthlyBudget">
+        <div class="monthlyBudgetHeading">
+            <!-- <i class="fa fa-trash-o" aria-hidden="true"></i> -->
+            <p>Monthly Budget</p>
+        </div>
+        <div class="monthlyBudget" id="monthlyBudget">
+            <div class="monthlyBudgetouterCircle">
+                <div class="monthlyBudgetinnerCircle">
+                    <p>Remaining</p>
+                    <p id="monthlyBudgetinnerCircleRemainingvalue">100%</p>
+                </div>
+            </div>
+            <div class="monthlyBudgetInfo">
+                <div class="monthlyBudgetRemaining">
+                    <p class="monthlyBudgetRemainingHeading">Remaining :</p>
+                    <p class="monthlyBudgetRemainingValue">0</p>
+                </div>
+                <hr>
+                <div class="monthlyBudgetBudget">
+                    <p class="monthlyBudgetBudgetHeading">Budget :</p>
+                    <p class="monthlyBudgetBudgetValue" id="monthlyBudgetValue">0</p>
+                </div>
+                <div class="monthlyBudgetExpenses">
+                    <p class="monthlyBudgetExpensesHeading">Expenses :</p>
+                    <p class="monthlyBudgetExpensesValue" id="monthlyBudgetExpensesValue">0</p>
+                </div>
+            </div>
+            <div class="greaterArrowToBudgetInfo" id="greaterArrowToBudgetInfo">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <hr id="hrLineOfMonthlyBudget">
+
+    <div class="monthlyBudgetDetailIndividual" id="monthlyBudgetDetailIndividual">
+
+    </div>
+
+    <div class="MonthlyBugetAddButton" id="MonthlyBugetAddButton">Add Budget</div>
+
+
+    <!-- Report Page Monthly Budget -->
+
+    <div class="monthlyBudgetIconspage" id="monthlyBudgetIconspage">
+        <i class="fa-solid fa-graduation-cap" id="Education"><span>Education</span></i>
+        <i class="fa-solid fa-bus" id="Transport"><span>Transport</span></i>
+        <i class="fa-solid fa-mug-hot" id="Tea"><span>Tea</span></i>
+        <i class="fa-solid fa-cart-shopping" id="Shopping"><span>Shopping</span></i>
+        <i class="fa-solid fa-utensils" id="Food"><span>Food</span></i>
+        <i class="fa-solid fa-phone-volume" id="Telephone"><span>Telephone</span></i>
+        <i class="fa-solid fa-tape" id="Entertainment"><span>Entertainment</span></i>
+        <i class="fa-solid fa-baseball-bat-ball" id="Sport"><span>Sport</span></i>
+        <i class="fa-solid fa-users" id="Social"><span>Social</span></i>
+        <i class="fa-solid fa-shirt" id="Clothing"><span>Clothing</span></i>
+        <i class="fa-solid fa-car" id="Car"><span>Car</span></i>
+        <i class="fa-solid fa-martini-glass" id="Liquor"><span>Liquor</span></i>
+        <i class="fa-solid fa-plug" id="Electronics"><span>Electronics</span></i>
+        <i class="fa-solid fa-motorcycle" id="Travel"><span>Travel</span></i>
+        <i class="fa-solid fa-kit-medical" id="Health"><span>Health</span></i>
+        <i class="fa-solid fa-paw" id="Pet"><span>Pet</span></i>
+        <i class="fa-solid fa-hammer" id="Repair"><span>Repair</span></i>
+        <i class="fa-solid fa-house" id="Housing"><span>Housing</span></i>
+        <i class="fa-solid fa-gift" id="Gift"><span>Gift</span></i>
+        <i class="fa-solid fa-hand-holding-dollar" id="Donate"><span>Donate</span></i>
+        <i class="fa-solid fa-cookie-bite" id="Snacks"><span>Snacks</span></i>
+        <i class="fa-solid fa-carrot" id="Vegetables"><span>Vegetables</span></i>
+        <i class="fa-brands fa-apple" id="Fruits"><span>Fruits</span></i>
+        <i class="fa-solid fa-gear" id="More"><span>More</span></i>
+    </div>
+
+    <!-- Calculator --> 
+
+    <div class="monthlycalculator" id="monthlycalculator">
+        <div class="monthlycalculatorinput">
+            <form action="">
+                <input class="inputOfCalculator" id="inputOfCalculator" type="text" name="inputOfCalculator">
+            
+        </div>
+        <div class="monthlycalculatorKeyBoard">
+            <p id="7">7</p>
+            <p id="8">8</p>
+            <p id="9">9</p>
+            <p id="BackFromCalculator"><i class="fa-solid fa-caret-down"></i></p>
+            <p id="4">4</p>
+            <p id="5">5</p>
+            <p id="6">6</p>
+            <p id="deleteIncalculator"><i class="fa-solid fa-trash"></i></p>
+            <p id="1">1</p>
+            <p id="2">2</p>
+            <p id="3">3</p>
+            <p id="deleteLeftInCalculator"><i class="fa-solid fa-delete-left"></i></p>
+            <p>.</p>
+            <p id="0">0</p>
+            <p></p>
+            <i class="fa-solid fa-circle-check"><input type="submit" id="monthlyBudgetOk" ></i>
+        </form>
+        </div>
+    </div>
+
+    <!-- Profile Page -->
+    <div class="mainProfile" id="mainProfile">
+        <div class="userDetailContainer">
+            <div class="userNameContainer">
+                <p class="userNameHeading">Username :</p>
+                <p id="userName">Pathmanaban</p>
+            </div>
+            <div class="userDetailUserIcon">
+                <i class="fa-regular fa-circle-user"></i>
+            </div>
+            <div class="userEmailContainer">
+                <p class="emailHeading">Email :</p>
+                <p id="email">pathmanaban@kce.ac.in</p>
+            </div>
+        </div>
+
+        <div class="infotableProfile">
+            <div class="profileIncome">
+                <p class="profileIncomeHeading">Income</p>
+                <p class="profileIncomeValue" id="profileIncomeValue">0</p>
+            </div>
+            <div class="profileExpense">
+                <p class="profileExpenseHeading">Expense</p>
+                <p class="profileExpenseValue" id="profileExpenseValue">0</p>
+            </div>
+            <div class="profileBalance">
+                <p class="profileBalanceHeading">Balance</p>
+                <p class="profileBalanceValue" id="profileBalanceValue">0</p>
+            </div>
+        </div>
+
+        <div class="signoutButton">
+            <p>SignOut</p>
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+
+    <!-- Add Page -->
+
+    <div class="addPage" id="addPage">
+        <div class="addPageIncomeExpenseContainer">
+            <p class="ExpenseHeading" id="ExpenseHeading">Expense</p>
+            <p class="IncomeHeading" id="IncomeHeading">Income</p>
+        </div>
+        <div class="addPageIcons" id="addPageIcons">
+            <i class="fa-solid fa-graduation-cap" id="AddEducation"><span>Education</span></i>
+            <i class="fa-solid fa-bus" id="AddTransport"><span>Transport</span></i>
+            <i class="fa-solid fa-mug-hot" id="AddTea"><span>Tea</span></i>
+            <i class="fa-solid fa-cart-shopping" id="AddShopping"><span>Shopping</span></i>
+            <i class="fa-solid fa-utensils" id="AddFood"><span>Food</span></i>
+            <i class="fa-solid fa-phone-volume" id="AddTelephone"><span>Telephone</span></i>
+            <i class="fa-solid fa-tape" id="AddEntertainment"><span>Entertainment</span></i>
+            <i class="fa-solid fa-baseball-bat-ball" id="AddSport"><span>Sport</span></i>
+            <i class="fa-solid fa-users" id="AddSocial"><span>Social</span></i>
+            <i class="fa-solid fa-shirt" id="AddClothing"><span>Clothing</span></i>
+            <i class="fa-solid fa-car" id="AddCar"><span>Car</span></i>
+            <i class="fa-solid fa-martini-glass" id="AddLiquor"><span>Liquor</span></i>
+            <i class="fa-solid fa-plug" id="AddElectronics"><span>Electronics</span></i>
+            <i class="fa-solid fa-motorcycle" id="AddTravel"><span>Travel</span></i>
+            <i class="fa-solid fa-kit-medical" id="AddHealth"><span>Health</span></i>
+            <i class="fa-solid fa-paw" id="AddPet"><span>Pet</span></i>
+            <i class="fa-solid fa-hammer" id="AddRepair"><span>Repair</span></i>
+            <i class="fa-solid fa-house" id="AddHousing"><span>Housing</span></i>
+            <i class="fa-solid fa-gift" id="AddGift"><span>Gift</span></i>
+            <i class="fa-solid fa-hand-holding-dollar" id="AddDonate"><span>Donate</span></i>
+            <i class="fa-solid fa-cookie-bite" id="AddSnacks"><span>Snacks</span></i>
+            <i class="fa-solid fa-carrot" id="AddVegetables"><span>Vegetables</span></i>
+            <i class="fa-brands fa-apple" id="AddFruits"><span>Fruits</span></i>
+            <i class="fa-solid fa-gear" id="AddMore"><span>More</span></i>
+        </div>
+        <div class="incomeIcons" id="incomeIcons">
+            <i class="fa-solid fa-wallet" id="Salary"><span>Salary</span></i>
+            <i class="fa-solid fa-sack-dollar" id="Investment"><span>Investment</span></i>
+            <i class="fa-regular fa-clock" id="Part-time"><span>Part-time</span></i>
+            <i class="fa-solid fa-gifts" id="Awards"><span>Awards</span></i>
+            <i class="fa-solid fa-ellipsis" id="Others"><span>Others</span></i>
+        </div>
+    </div>
+
+    <!-- Sign Up Page...... -->
+
+    <div class="signUpPage">
+        <p></p>
+        <p class="signInUsername">Username : </p>
+        <input type="text">
+        <p class="signInEmail">Email :</p>
+        <input type="text">
+        <p class="SignInPassword">Password :</p>
+        <input type="password">
+        <p class="signinConfirmPwd">Confirm Password :</p>
+        <input type="password">
+        <button type="submit" id="signInButton">Sign In</button>
+        <p></p>
+    </div>
+    
+</body>
+</html>
